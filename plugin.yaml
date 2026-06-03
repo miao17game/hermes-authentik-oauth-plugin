@@ -1,0 +1,17 @@
+name: authentik
+version: 1.0.0
+description: >
+  Dashboard auth provider — OAuth 2.0 / OIDC via Authentik.
+  Supports authorization-code + PKCE (S256) with optional client secret
+  for confidential clients. Uses OIDC Discovery to resolve endpoints.
+  Auto-activates when the Authentik URL and client_id are configured
+  via environment variables or config.yaml.
+author: ""
+kind: backend
+requires_env:
+  - name: HERMES_DASHBOARD_AUTHENTIK_URL
+    description: "Base URL of your Authentik instance (e.g. https://auth.example.com)"
+    secret: false
+  - name: HERMES_DASHBOARD_AUTHENTIK_CLIENT_ID
+    description: "OAuth2/OIDC client ID configured in Authentik"
+    secret: false
