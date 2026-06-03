@@ -1,0 +1,12 @@
+[project]
+name = "hermes-authentik-oauth-plugin"
+version = "1.0.0"
+description = "Hermes Agent dashboard auth provider — OAuth 2.0 / OIDC via Authentik"
+requires-python = ">=3.10"
+dependencies = [
+    "httpx>=0.24",
+    "PyJWT[crypto]>=2.8,<3",
+]
+
+[project.entry-points."hermes_agent.plugins"]
+authentik = "__init__"
